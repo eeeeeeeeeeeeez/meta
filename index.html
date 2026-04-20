@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入 LINE 好友</title>
+    <style>
+        /* 基礎樣式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 頂部標題 */
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            color: #06C755; /* LINE 官方綠 */
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        /* QR Code 區域 */
+        .qr-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .qr-section img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 15px;
+            /* 模擬影片中的 QR Code 樣式 */
+            border: 1px solid #eee;
+        }
+
+        /* 關鍵按鈕樣式 */
+        .btn-join {
+            display: block;
+            background-color: #06C755;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-join:active {
+            background-color: #05a346;
+            transform: translateY(2px);
+        }
+
+        /* 下方說明文字 */
+        .instructions {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .instructions p {
+            margin-bottom: 10px;
+        }
+
+        /* 底部裝飾線 */
+        .footer-line {
+            margin-top: 30px;
+            height: 1px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">LINE</div>
+
+        <div class="qr-section">
+            <img src="https://qr-official.line.me/sid/M/6BR0r4E.png" alt="LINE QR Code">
+        </div>
+
+        <a href="https://lin.ee/6BR0r4E" class="btn-join">
+            無須掃碼點擊加入
+        </a>
+
+        <div class="instructions">
+            <p>透過行動條碼加入 LINE 好友</p>
+            <p>請在 LINE 應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，接著點選「行動條碼」，然後掃描此行動條碼。</p>
+        </div>
+
+        <div class="footer-line"></div>
+    </div>
+
+    <script>
+        // 可選：如果想增加一點統計功能，可以在這裡加入點擊追蹤代碼
+        document.querySelector('.btn-join').addEventListener('click', function() {
+            console.log('User clicked join button');
+            // 如果你有安裝 Meta Pixel，可以在這裡觸發自定義事件
+            // fbq('track', 'Contact'); 
+        });
+    </script>
+
+</body>
+</html>
